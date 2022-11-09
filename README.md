@@ -4,6 +4,7 @@
 
 v1:可以实现基础的图片目标检测，数据集格式为yolo格式
 ```
+classes.py存放检测类别。
 .
 │  
 ├─traindata
