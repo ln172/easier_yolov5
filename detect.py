@@ -5,17 +5,17 @@ import argparse
 from utils.general import ( cv2, non_max_suppression,  scale_boxes,  xyxy2xywh)
 from utils.plots import Annotator, save_one_box
 from utils.dataloaders import  LoadImages
-img_path=''
+
 save_dir ='./results'
 from pathlib import Path
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-def run(weights= './output/weights/last.pt',
+def run(weights= './output/weights/last.pt',#your weight
         imgsz=(640, 640),  # inference size (height, width)
         conf_thres=0.25,  # confidence threshold
         iou_thres=0.45,  # NMS IOU threshold
         max_det=1000,  # maximum detections per image
-        source=r'D:\znmz\test',
+        source=r'.\test',#your detect dataset
         device='',  # cuda device, i.e. 0 or 0,1,2,3 or cpu
         view_img=False,  # show results
         save_txt=False,  # save results to *.txt
